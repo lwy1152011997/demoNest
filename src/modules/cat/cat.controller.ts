@@ -21,7 +21,7 @@ import { CatService } from './cat.service';
  */
 @Controller('cat')
 export class CatController {
-  constructor(private readonly catService: CatService) {}
+  constructor(private readonly catService: CatService) { }
 
   // 不带请求参数的
   // @Get('/getPetName')
@@ -62,6 +62,12 @@ export class CatController {
   //   };
   // }
 
+  // 查询所有宠物的名字
+  @Get('/getAllNameList')
+  getAllNameList() {
+    return this.catService.findAllPetsLsit();
+  }
+
   /**
    * 再看 Post请求
    */
@@ -98,5 +104,5 @@ export class CatController {
       name: `获取到请求参数${reqParams.type}`,
       header: `请求头信息${headerInfos}`,
     };
-  };
+  }
 }
