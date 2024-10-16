@@ -7,4 +7,10 @@ export class CatService {
     // 暂时还没有链接数据库, 这里就模拟去查询数据库的过程
     return ['tom', 'tony', '黑猫警长'];
   }
+
+  // 异步
+  //   async findMoney() {
+  //     const res = await xxxxx;
+  //     return res;
+  //   }
 }
